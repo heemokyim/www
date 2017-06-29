@@ -1,292 +1,327 @@
-        @charset "utf-8";
-        /*요소의 여백 초기화*/
-        
-        html {
-            font-size: 10px;
-        }
-        
-        body {
-            font-size: 1.4rem;
-        }
-        
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p,
-        ul,
-        li {
-            margin: 0;
-            padding: 0;
-        }
-        
-        @font-face {
-            font-family: 'Noto Sans Regular';
-            font-style: normal;
-            /*기울임꼴이 아님*/
-            font-weight: 400;
-            src: local('Noto Sans Regular'), local('NotoSans-Regular'), url('font/eot/NotoSansKR-Regular-Hestia.eot'), url('font/eot/NotoSansKR-Regular-Hestia.eot?#iefix') format('embedded-opentype'), url('font/woff/NotoSansKR-Regular-Hestia.woff') format('woff'), url('font/otf/NotoSansKR-Regular-Hestia.otf') format('opentype');
-        }
-        
-        @font-face {
-            font-family: 'Noto Sans Bold';
-            font-style: normal;
-            font-weight: 700;
-            src: local('Noto Sans Bold'), local('NotoSans-Bold'), url('font/eot/NotoSansKR-Bold-Hestia.eot'), url('font/eot/NotoSansKR-Bold-Hestia.eot?#iefix') format('embedded-opentype'), url('font/woff/NotoSansKR-Bold-Hestia.woff') format('woff'), url('font/otf/NotoSansKR-Bold-Hestia.otf') format('opentype');
-        }
-        
-        @font-face {
-            font-family: 'webcafeIcon';
-            font-weight: 400;
-            src: url('font/webcafeIcon.eot');
-            src: url('font/webcafeIcon.eot?#iefix') format('embedded-opentype'), url('font/webcafeIcon.woff') format('woff'), url('font/webcafeIcon.ttf') format('truetype'), url('font/webcafeIcon.svg#webcaferegular') format('svg');
-        }
-        /*제목크기 최소화*/
-        
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-size: 1em;
-            font-weight: normal;
-        }
-        /*레이아웃*/
-        
-        .wrapper {
-            /*background: url(images/bg_flower.png) no-repeat 50% 0,
+@charset "utf-8";
+
+/*요소의 여백 초기화*/
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.4rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Noto Sans Regular';
+    font-style: normal;
+    /*기울임꼴이 아님*/
+    font-weight: 400;
+    src: local('Noto Sans Regular'), local('NotoSans-Regular'), url('font/eot/NotoSansKR-Regular-Hestia.eot'), url('font/eot/NotoSansKR-Regular-Hestia.eot?#iefix') format('embedded-opentype'), url('font/woff/NotoSansKR-Regular-Hestia.woff') format('woff'), url('font/otf/NotoSansKR-Regular-Hestia.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Noto Sans Bold'), local('NotoSans-Bold'), url('font/eot/NotoSansKR-Bold-Hestia.eot'), url('font/eot/NotoSansKR-Bold-Hestia.eot?#iefix') format('embedded-opentype'), url('font/woff/NotoSansKR-Bold-Hestia.woff') format('woff'), url('font/otf/NotoSansKR-Bold-Hestia.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'webcafeIcon';
+    font-weight: 400;
+    src: url('font/webcafeIcon.eot');
+    src: url('font/webcafeIcon.eot?#iefix') format('embedded-opentype'), url('font/webcafeIcon.woff') format('woff'), url('font/webcafeIcon.ttf') format('truetype'), url('font/webcafeIcon.svg#webcaferegular') format('svg');
+}
+
+
+/*제목크기 최소화*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1em;
+    font-weight: normal;
+}
+
+
+/*레이아웃*/
+
+.wrapper {
+    /*background: url(images/bg_flower.png) no-repeat 50% 0,
   linear-gradient(to bottom, rgba(0,0,0,0,5) 0%, rgba(255,255,255,1) 100%);*/
-            background: url(images/bg_flower.png) no-repeat 50% 0, linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(250, 250, 250, 1) 100%);
-            height: 100vh;
-        }
-        
-        .header,
-        .visual,
-        .main-content,
-        .slogan,
-        .footer {
-            width: 940px;
-            margin: 0 auto;
-            box-sizing: border-box;
-        }
-        /* 헤 더 */
-        
-        .header {
-            background-color: #fff;
-            border-radius: 0 0 15px 15px;
-            position: relative;
-            padding: 0 30px 40px 30px;
-        }
-        /* 링크 스타일*/
-        
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-        /* 로 고 */
-        
-        .logo {
-            position: absolute;
-            top: 50px;
-            left: 60px;
-        }
-        /* 텍스트링크 - 안내링크 */
-        
-        .info-menu {
-            list-style-type: none;
-            font-size: 0;
-            text-align: right;
-            position: relative;
-            right: -10px;
-        }
-        
-        .info-menu li,
-        .info-menu a {
-            display: inline-block;
-        }
-        
-        .info-menu li {
-            display: inline;
-            font-size: 14px;
-            text-transform: uppercase;
-        }
-        
-        .info-menu a {
-            padding: 10px;
-        }
-        
-        .info-menu li::after {
-            content: ":";
-        }
-        
-        .info-menu li:last-child::after {
-            content: "";
-        }
-        /* 메인 메뉴*/
-        
-        .main-menu {
-            background: linear-gradient(to bottom, #e5892d 0%, #e0652c 35%, #e0652c 65%, #e5892d 100%);
-            list-style-type: none;
-            border-top: 2px solid #181818;
-            border-radius: 0 0 5px 5px;
-            padding-left: 225px;
-            height: 45px;
-        }
-        
-        .main-menu>li {
-            float: left;
-            position: relative;
-        }
-        
-        .main-menu span {
-            font-size: 1.5rem;
-            font-family: "Noto Sans Bold";
-            color: rgba(255, 255, 255, 0.95);
-            display: block;
-            padding: 0 20px;
-            line-height: 45px;
-            border-left: 2px solid rgba(255, 255, 255, 0.9);
-            text-shadow: 1px 0px 0 #000, 0px 1px 0 #000, -1px 0px 0 #000, 0px -1px 0 #000;
-        }
-        
-        .main-menu span:hover,
-        .main-menu span:focus {
-            /*color: hsla(4510098487, 80%, 80%, 1);*/
-            color: yellow;
-            outline: 0;
-        }
-        
-        .main-menu span:hover::after,
-        .main-menu span:focus::after {
-            content: "";
-            display: block;
-            border-top: 2px solid #181818;
-        }
-        
-        .main-menu ul {
-            list-style-type: none;
-            position: absolute;
-            white-space: nowrap;
-            top: 45px;
-        }
-        
-        .main-menu ul li {
-            display: inline-block;
-        }
-        
-        .main-menu ul a::before {
-            font-family: "webcafeicon";
-            content: "r";
-            position: relative;
-            top: 2px;
-        }
-        
-        .main-menu ul a:hover::before,
-        .main-menu ul a:focus::before {
-            content: "c";
-        }
-        
-        .main-menu ul a {
-            padding: 8px 15px 7px 0;
-            display: block;
-        }
-        
-        .about-html {
-            display: none;
-        }
-        
-        .about-css {
-            display: none;
-            left: 0;
-        }
-        
-        .about-web-standards {
-            display: none;
-            left: 0;
-        }
-        
-        .about-web-accessability {
-            display: none;
-            left: -140px;
-        }
-        
-        .qna {
-            display: none;
-            left: -170px;
-        }
-        
-        .archive {
-            display: none;
-            right: -25px
-        }
-        /* 비주얼 */
-        
-        @keyframes text-ani {
-            0% {
-                font-size: 12px;
-                color: rgba(0, 0, 0, 0);
-                transform: translate(0, 0);
-            }
-            100% {
-                font-size: 24px;
-                color: rgba(0, 0, 0, 1);
-                transform: translate(400px, 70px);
-            }
-        }
-        
-        .visual {
-            height: 120px;
-            position: relative;
-        }
-        
-        .visual-text {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            display: inline-block;
-            /*animation-name: text-ani;
+    background: url(images/bg_flower.png) no-repeat 50% 0, linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(250, 250, 250, 1) 100%);
+    height: 100vh;
+}
+
+.header,
+.visual,
+.main-content,
+.slogan,
+.footer {
+    width: 940px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+/* 헤 더 */
+
+.header {
+    background-color: #fff;
+    border-radius: 0 0 15px 15px;
+    position: relative;
+    padding: 0 30px 40px 30px;
+}
+
+
+/* 링크 스타일*/
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* 로 고 */
+
+.logo {
+    position: absolute;
+    top: 50px;
+    left: 60px;
+}
+
+
+/* 텍스트링크 - 안내링크 */
+
+.info-menu {
+    list-style-type: none;
+    font-size: 0;
+    text-align: right;
+    position: relative;
+    right: -10px;
+}
+
+.info-menu li,
+.info-menu a {
+    display: inline-block;
+}
+
+.info-menu li {
+    display: inline;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.info-menu a {
+    padding: 10px;
+}
+
+.info-menu li::after {
+    content: ":";
+}
+
+.info-menu li:last-child::after {
+    content: "";
+}
+
+
+/* 메인 메뉴*/
+
+.main-menu {
+    background: linear-gradient(to bottom, #e5892d 0%, #e0652c 35%, #e0652c 65%, #e5892d 100%);
+    list-style-type: none;
+    border-top: 2px solid #181818;
+    border-radius: 0 0 5px 5px;
+    padding-left: 225px;
+    height: 45px;
+}
+
+.main-menu>li {
+    float: left;
+    position: relative;
+}
+
+.main-menu span {
+    font-size: 1.5rem;
+    font-family: "Noto Sans Bold";
+    color: rgba(255, 255, 255, 0.95);
+    display: block;
+    padding: 0 20px;
+    line-height: 45px;
+    border-left: 2px solid rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 0px 0 #000, 0px 1px 0 #000, -1px 0px 0 #000, 0px -1px 0 #000;
+}
+
+.main-menu span:hover,
+.main-menu span:focus {
+    /*color: hsla(4510098487, 80%, 80%, 1);*/
+    color: yellow;
+    outline: 0;
+}
+
+.main-menu span:hover::after,
+.main-menu span:focus::after {
+    content: "";
+    display: block;
+    border-top: 2px solid #181818;
+}
+
+.main-menu ul {
+    list-style-type: none;
+    position: absolute;
+    white-space: nowrap;
+    top: 45px;
+}
+
+.main-menu ul li {
+    display: inline-block;
+}
+
+.main-menu ul a::before {
+    font-family: "webcafeicon";
+    content: "r";
+    position: relative;
+    top: 2px;
+}
+
+.main-menu ul a:hover::before,
+.main-menu ul a:focus::before {
+    content: "c";
+}
+
+.main-menu ul a {
+    padding: 8px 15px 7px 0;
+    display: block;
+}
+
+.about-html {
+    display: none;
+}
+
+.about-css {
+    display: none;
+    left: 0;
+}
+
+.about-web-standards {
+    display: none;
+    left: 0;
+}
+
+.about-web-accessability {
+    display: none;
+    left: -140px;
+}
+
+.qna {
+    display: none;
+    left: -170px;
+}
+
+.archive {
+    display: none;
+    right: -25px
+}
+
+
+/* 비주얼 */
+
+@keyframes text-ani {
+    0% {
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0);
+        transform: translate(0, 0);
+    }
+    100% {
+        font-size: 24px;
+        color: rgba(0, 0, 0, 1);
+        transform: translate(400px, 70px);
+    }
+}
+
+.visual {
+    height: 120px;
+    position: relative;
+}
+
+.visual::before,
+.visual::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+}
+
+.visual::before {
+    background: url(images/ani_flower_01.png) no-repeat 0 -10px, url(images/ani_flower_02.png) no-repeat 670px 0;
+}
+
+.visual::after {
+    background: url(images/ani_flower_03.png) no-repeat 300px 0, url(images/ani_flower_04.png) no-repeat 800px 0;
+}
+
+.visual-text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: inline-block;
+    /*animation-name: text-ani;
             animation-duration: 5s;
             animation-fill-mode: forwards;
             animation-delay: 2s;*/
-            color: rgba(0, 0, 0, 0);
-            /*animation-timing-function: ease-in-out;
+    color: rgba(0, 0, 0, 0);
+    /*animation-timing-function: ease-in-out;
             animation-iteration-count: 3;
             animation-direction: alternate;*/
-            animation: text-ani 0.5s forwards ease-in-out;
-        }
-        
-        .main-content {
-            background-color: #fff;
-            border-radius: 15px 15px 0 0;
-            min-height: 400px;
-            padding: 30px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            /*align-items: flex-start;*/
-        }
-        
-        .group1 {
-            width: 250px;
-        }
-        
-        .group2 {
-            width: 380px;
-        }
-        
-        .group3 {
-            width: 190px;
-        }
-        
-        .slogan {
-            height: 10vh;
-        }
-        
-        .footer {
-            height: 10vh;
-        }
-        
-        .footer-bg {
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(250, 250, 250, 1) 100%);
-        }
+    animation: text-ani 0.5s forwards ease-in-out;
+}
+
+.main-content {
+    background-color: #fff;
+    border-radius: 15px 15px 0 0;
+    min-height: 400px;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*align-items: flex-start;*/
+}
+
+.group1 {
+    width: 250px;
+}
+
+.group2 {
+    width: 380px;
+}
+
+.group3 {
+    width: 190px;
+}
+
+.slogan {
+    height: 10vh;
+}
+
+.footer {
+    height: 10vh;
+}
+
+.footer-bg {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(250, 250, 250, 1) 100%);
+}
