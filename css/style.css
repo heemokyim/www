@@ -153,6 +153,18 @@
             display: inline-block;
         }
         
+        .main-menu ul a::before {
+            font-family: "webcafeicon";
+            content: "r";
+            position: relative;
+            top: 2px;
+        }
+        
+        .main-menu ul a:hover::before,
+        .main-menu ul a:focus::before {
+            content: "c";
+        }
+        
         .about-html {
             display: block;
             top: 0;
