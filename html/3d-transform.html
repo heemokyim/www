@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>3D Transform 속성 익히기</title>
+    <style>
+        .container {
+            margin: 50px auto;
+            border: 1px solid #999;
+            width: 1000px;
+            height: 500px;
+            overflow: hidden;
+            /*perspective: 1000px;*/
+        }
+        /*부모한테 주는것인지(한번에 4개를 볼 때 각각 화면이 다르게 보여짐) 자식한테 하나씩 주는지 결정*/
+        
+        .box {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background: red;
+            margin: 20px;
+            transform: perspective(1000px) rotateY(45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>
